@@ -2,7 +2,7 @@
   "name": "tailwindui-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Petrichor-Dev/me",
+  "homepage": "https://petrichor-dev.github.io/me/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

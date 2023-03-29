@@ -3,19 +3,16 @@ import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-module.exports = {
-  basePath,
-  assetPrefix: `${basePath}/`,
-};
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx'],
   reactStrictMode: true,
+  basePath,
+  assetPrefix: `${basePath}/`,
   experimental: {
     scrollRestoration: true,
   },
-}
+};
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -23,8 +20,7 @@ const withMDX = nextMDX({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypePrism],
   },
-})
+});
 
+export default withMDX(nextConfig);
 
-
-export default withMDX(nextConfig)
