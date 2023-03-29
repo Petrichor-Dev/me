@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "rm -rf out && yarn run build && yarn run export && touch out/.nojekyll && echo 'your-domain.com' > out/CNAME && git add out && git commit -m 'Next.js export' || true && git push --force origin gh-pages"
+    "deploy": "rm -rf out && yarn run build && yarn run export && touch out/.nojekyll && echo 'https://petrichor-dev.github.io/me/' > out/CNAME && git add out && git commit -m 'Next.js export' || true && git push --force origin gh-pages"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
